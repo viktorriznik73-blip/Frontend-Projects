@@ -12,12 +12,13 @@ interface UserPayload {
   exp: number;
 }
 
+
 interface ProfileResponse {
   message: string;
   user: UserPayload;
 }
 
-const API_URL = 'http://192.168.188.51:3000';
+const API_URL = import.meta.env.VITE_API_URL;
 
 export function App() {
   const [isLogin, setIsLogin] = useState<boolean>(true);
